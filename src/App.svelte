@@ -20,7 +20,7 @@ let map;
 
 
 const loadRoutes = async () => {
-    const mapData = await fetch(`/routes.json`, {
+    const mapData = await fetch(`./routes.json`, {
             method: 'GET',
     })
 	const routes = await mapData.json()
@@ -34,7 +34,7 @@ const loadRoutes = async () => {
 
 onMount(async () => {
     map = L.map('mapid').setView([65.330, 26.818], 5);
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     await loadRoutes()
