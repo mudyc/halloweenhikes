@@ -34,8 +34,11 @@ const loadRoutes = async () => {
 
 onMount(async () => {
     map = L.map('mapid').setView([65.330, 26.818], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    L.tileLayer('//tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://waymarkedtrails.org">Waymarked Trails</a>'
     }).addTo(map);
     await loadRoutes()
 })
