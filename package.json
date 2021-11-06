@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "gpx-viewer",
   "version": "1.0.0",
   "scripts": {
     "deploy": "tsc && cdk deploy",

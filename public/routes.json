@@ -1,6 +1,38 @@
 [
     {
-        "name": "Testi",
-        "file": "routes/reitti20.gpx"
+        "name": "2013",
+        "file": "routes/2013_kaikki.gpx"
+    },
+    {
+        "name": "2014",
+        "file": "routes/2014_kaikki.gpx"
+    },
+    {
+        "name": "2015",
+        "file": "routes/2015_160km.gpx"
+    },
+    {
+        "name": "2016",
+        "file": "routes/2016_100km.gpx"
+    },
+    {
+        "name": "2017",
+        "file": "routes/2017_160km.gpx"
+    },
+    {
+        "name": "2018",
+        "file": "routes/2018_160km.gpx"
+    },
+    {
+        "name": "2019",
+        "file": "routes/2019_160km.gpx"
+    },
+    {
+        "name": "2020",
+        "file": "routes/2020_160km.gpx"
+    },
+    {
+        "name": "2021",
+        "file": "routes/2021_160km.gpx"
     }
 ]

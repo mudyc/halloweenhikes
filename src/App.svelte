@@ -25,8 +25,13 @@ const loadRoutes = async () => {
     })
 	const routes = await mapData.json()
 	for (const route of routes) {
-		new L.GPX(route.file, {async: true}).on('loaded', function(e) {
-			map.fitBounds(e.target.getBounds());
+        new L.GPX(route.file, {
+            async: true,
+            gpx_options: {
+                parseElements: ['track', 'route']
+            }
+        }).on('loaded', function(e) {
+			//map.fitBounds(e.target.getBounds());
 		}).addTo(map);
 	}
     console.log(routes)
@@ -40,6 +45,14 @@ onMount(async () => {
     L.tileLayer('//tile.waymarkedtrails.org/hiking/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://waymarkedtrails.org">Waymarked Trails</a>'
     }).addTo(map);
+    
+    const jkl = [62.24452234218559, 25.748742842059354];
+    const circle = L.circle(jkl, {
+        radius: 150*1000, fill: false
+    })
+    circle.addTo(map);
+    map.fitBounds(circle.getBounds());
+
     await loadRoutes()
 })
 </script>
