@@ -1,5 +1,17 @@
 [
     {
+        "name": "2010",
+        "file": "routes/2010.gpx"
+    },
+    {
+        "name": "2011",
+        "file": "routes/2011.gpx"
+    },
+    {
+        "name": "2012",
+        "file": "routes/2012.gpx"
+    },
+    {
         "name": "2013",
         "file": "routes/2013_kaikki.gpx"
     },
